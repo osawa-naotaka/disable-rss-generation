@@ -1,15 +1,15 @@
 <?php
 /*
   Plugin Name: Disable RSS Generation
-  Plugin URI:
+  Plugin URI: https://github.com/osawa-naotaka/disable-rss-generation
   Description: disable RSS generation.
   Version: 1.0.0
-  Author: Osawa Naotaka
-  Author URI: https://github.com/osawa-naotaka/disable-rss-generation
+  Author: osawa naotaka
+  Author URI: https://github.com/osawa-naotaka
   License: MIT
  */
 
-add_action('after_setup_theme', function () {
+add_action('init', function () {
     // stop generating RSS feeds.
     remove_action('do_feed_rdf', 'do_feed_rdf');
     remove_action('do_feed_rss', 'do_feed_rss');
